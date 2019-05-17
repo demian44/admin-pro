@@ -21,7 +21,7 @@ import { AppRoutingModule } from '../app-routing.module';
     BreadcrumsComponent,
     NopagefoundComponent
   ],
-  imports: [ 
+  imports: [
     AppRoutingModule
   ]
 })
