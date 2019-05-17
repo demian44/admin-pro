@@ -1,29 +1,29 @@
+
+//Modules
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { PageModule } from './pages/page.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Components
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { NopagefoundComponent } from './shared/nopagefound/nopagefound.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { ProgressComponent } from './pages/progress/progress.component';
-import { GraficOneComponent } from './pages/grafic-one/grafic-one.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { BreadcrumsComponent } from './shared/breadcrums/breadcrums.component';
-import { SidebarService } from './services/sidebar.service';
-import { AppRoutingModule } from './app-routing.module';
-import { RouterModule } from '@angular/router';
 import { PagesComponent } from './pages/pages.component';
 import { RegisterComponent } from './login/register.component';
+
+//Services
+import { SidebarService } from './services/sidebar.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     NopagefoundComponent,
-    DashboardComponent,
-    ProgressComponent,
-    GraficOneComponent,
     HeaderComponent,
     SidebarComponent,
     BreadcrumsComponent,
@@ -33,7 +33,8 @@ import { RegisterComponent } from './login/register.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    PageModule
   ],
   providers: [SidebarService],
   bootstrap: [AppComponent]
