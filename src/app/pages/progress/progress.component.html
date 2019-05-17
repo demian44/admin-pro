@@ -1,3 +1,41 @@
-<p>
-  progress works!
-</p>
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title"> Progress bar </h4>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+            [attr.ariaValuenow]="progress" aria-valuemin="0" aria-valuemax="100" [style.width]="progress + '%'"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        Test text
+      </div>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="input-group">
+          <span class="input-group-btn">
+            <div class="btn btn-outline-primary" type="button" (click)='incrementValue(-5)' >
+              <i class="mdi mdi-minus"> </i>
+            </div>
+          </span>
+          <input type="text" class="form-control" [(ngModel)]='progress'>
+          <span class="input-group-btn">
+            <div class="btn btn-outline-primary" type="button" (click)='incrementValue(5)'>
+              <i class="mdi mdi-plus"> </i>
+            </div>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
