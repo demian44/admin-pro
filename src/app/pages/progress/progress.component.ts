@@ -9,18 +9,22 @@ export class ProgressComponent implements OnInit {
 
   percentage: number;
   progress: number;
+  progress2: number;
+
   constructor() {
     this.percentage = 50;
     this.progress = 60;
+    this.progress2 = 50;
+  }
+
+  aumentar() {
+    this.progress++;
+  }
+
+  ChangeValue(evente: number) {
+    console.log(`Event: ${evente}`);
   }
 
   ngOnInit() {
   }
-
-  incrementValue(value: number) {
-    console.log('Entro');
-    if ((this.progress < 100 && value > 0) || (this.progress > 0 && value < 0))
-      this.progress += value;
-  }
-
 }
