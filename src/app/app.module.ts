@@ -29,4 +29,6 @@ import { SidebarService } from './services/sidebar.service';
   providers: [SidebarService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule 
+{
+}

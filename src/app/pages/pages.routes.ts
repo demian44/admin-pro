@@ -1,9 +1,10 @@
+// Router classes
 import { Routes, RouterModule } from '@angular/router';
 
 // Components
 import { PagesComponent } from './pages.component';
 import { ProgressComponent } from './progress/progress.component';
-import { GraficOneComponent } from './grafic-one/grafic-one.component';
+import { GraficOneComponent } from './graphic-one/graphic-one.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 
@@ -14,7 +15,7 @@ const routes: Routes = [
         children:
             [
                 { path: 'progress', component: ProgressComponent },
-                { path: 'graficOne', component: GraficOneComponent },
+                { path: 'graphicOne', component: GraficOneComponent },
                 { path: 'dashboard', component: DashboardComponent },
                 { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             ]
