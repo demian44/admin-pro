@@ -6,7 +6,7 @@ import { DonutGraphic } from './donut-graphic';
   templateUrl: './donut-graphic.component.html',
   styles: []
 })
-export class DonutGraphicComponent{
+export class DonutGraphicComponent {
 
   @Input() graphic: DonutGraphic;
 
