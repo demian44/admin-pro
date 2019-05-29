@@ -1,0 +1,5 @@
+<div class="row" *ngIf="graphics">
+  <div class="col-6" *ngFor="let graphic of graphics">    
+    <app-donut-graphic [graphic]="graphic"></app-donut-graphic>
+  </div>
+</div>
