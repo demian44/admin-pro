@@ -16,7 +16,7 @@ const routes: Routes = [
     children:
       [
         { path: 'progress', component: ProgressComponent },
-        { path: 'graphicOne', component: GraficOneComponent },
+        { path: 'graphic-one', component: GraficOneComponent },
         { path: 'dashboard', component: DashboardComponent },
         { path: 'account-settings', component: AccountSettingsComponent },
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
