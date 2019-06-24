@@ -18,6 +18,7 @@ import { DonutGraphicComponent } from '../components/donut-graphic/donut-graphic
 import { CHILD_ROUTES } from './pages.routes';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PromisesComponent } from './promises/promises.component';
     GraficOneComponent,
     AumentatorComponent,
     AccountSettingsComponent,
-    PromisesComponent
+    PromisesComponent,
+    RxjsComponent,
     ],
   exports: [
     DashboardComponent,
