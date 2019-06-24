@@ -4,15 +4,22 @@ import { BreadcrumsComponent } from './breadcrums/breadcrums.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
+  imports: [
+    AppRoutingModule,
+    RouterModule,
+    CommonModule
+  ],
   declarations: [
     NopagefoundComponent,
     HeaderComponent,
     SidebarComponent,
     BreadcrumsComponent,
-    NopagefoundComponent
+    NopagefoundComponent,
   ],
   exports: [
     NopagefoundComponent,
@@ -20,9 +27,6 @@ import { AppRoutingModule } from '../app-routing.module';
     SidebarComponent,
     BreadcrumsComponent,
     NopagefoundComponent
-  ],
-  imports: [
-    AppRoutingModule
   ]
 })
 export class SharedModule { }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { routerNgProbeToken } from '@angular/router/src/router_module';
+declare function init_plugins();
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _router: Router) { }
 
   ngOnInit() {
+    init_plugins();
+  }
+
+  logIn() {
+    this._router.navigate(["dashboard"])
   }
 
 }
