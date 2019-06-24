@@ -8,6 +8,7 @@ import { GraficOneComponent } from './graphic-one/graphic-one.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromisesComponent } from './promises/promises.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       [
         { path: 'progress', component: ProgressComponent },
         { path: 'graphic-one', component: GraficOneComponent },
+        { path: 'promises', component: PromisesComponent },
         { path: 'dashboard', component: DashboardComponent },
         { path: 'account-settings', component: AccountSettingsComponent },
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
