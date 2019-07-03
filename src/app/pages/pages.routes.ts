@@ -21,8 +21,8 @@ const routes: Routes = [
         { path: 'graphic-one', component: GraficOneComponent },
         { path: 'dashboard', component: DashboardComponent },
         { path: 'promises', component: PromisesComponent },
-        { path: 'rxjs', component: RxjsComponent },
         { path: 'account-settings', component: AccountSettingsComponent },
+        { path: 'rxjs', component: RxjsComponent },
         { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       ]
   }

@@ -12,7 +12,7 @@ export class PromisesComponent implements OnInit {
   }
 
   /**
-   * Execute the promise and 
+   * Execute the promise and
    */
   private runPromise = (): void => {
     this._promise = this.generatePromise();
@@ -30,7 +30,7 @@ export class PromisesComponent implements OnInit {
    * @returns retorns a Promise
    */
   private generatePromise(): Promise<boolean> {
-    return new Promise<boolean>(this.runLogic);
+    return new Promise<boolean>(this.runPromiseLogic);
   }
 
   /**
@@ -38,7 +38,7 @@ export class PromisesComponent implements OnInit {
    * @param resolve
    * @param regect
    */
-  private runLogic = (resolve, reject): void => {
+  private runPromiseLogic = (resolve: (arg: boolean) => void, reject: (arg: boolean) => void): void => {
     let counter: number = 0;
     let interval: any = setInterval(() => {
       counter++;
@@ -52,7 +52,6 @@ export class PromisesComponent implements OnInit {
     },
       1000);
   }
-
 
   private executeIfSucces = (param: boolean): void => {
     console.info(`Se ejecutó la promesa correctamente ${param}`)
