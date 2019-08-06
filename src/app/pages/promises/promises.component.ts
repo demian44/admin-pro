@@ -1,13 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router, ActivationEnd } from '@angular/router';
+import { filter, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-promises',
   templateUrl: './promises.component.html',
   styleUrls: ['./promises.component.css']
 })
-export class PromisesComponent implements OnInit {
+export class PromisesComponent {
   private _promise: Promise<boolean>;
-  constructor() {
+  constructor(private router: Router) {
+    console.log('this.router.events');
+    let observable = this.router.events
+      .pipe(
+        filter(event => event instanceof ActivationEnd),
+        filter((activationEnd: ActivationEnd) => activationEnd.snapshot.data.title != undefined),
+        map((activationEnd: ActivationEnd) => activationEnd.snapshot.data.title),
+      );
+
+    observable.subscribe((x: string) => console.log(x));
+
     this.runPromise();
   }
 
@@ -20,9 +32,6 @@ export class PromisesComponent implements OnInit {
       .then(this.executeIfSucces)
       .catch(this.executeIfFails)
       .finally(this.executeWhenFinally);
-  }
-
-  ngOnInit() {
   }
 
   /**

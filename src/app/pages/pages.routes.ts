@@ -10,6 +10,7 @@ import { NgModule } from '@angular/core';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromisesComponent } from './promises/promises.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ObservableExampleComponent } from './observable-example/observable-example.component';
 
 const routes: Routes = [
   {
@@ -17,13 +18,14 @@ const routes: Routes = [
     component: PagesComponent,
     children:
       [
-        { path: 'progress', component: ProgressComponent },
-        { path: 'graphic-one', component: GraficOneComponent },
-        { path: 'dashboard', component: DashboardComponent },
-        { path: 'promises', component: PromisesComponent },
-        { path: 'account-settings', component: AccountSettingsComponent },
-        { path: 'rxjs', component: RxjsComponent },
-        { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
+        { path: 'progress', component: ProgressComponent, data: { title: "Progress" } },
+        { path: 'graphic-one', component: GraficOneComponent , data: { title: "Grafics" } },
+        { path: 'dashboard', component: DashboardComponent , data: { title: "Dashboard" } },
+        { path: 'promises', component: PromisesComponent , data: { title: "Promises" } },
+        { path: 'account-settings', component: AccountSettingsComponent , data: { title: "Account Settings" } },
+        { path: 'rxjs', component: RxjsComponent , data: { title: "Rxjs Components" } },
+        { path: 'ovservable-example', component: ObservableExampleComponent , data: { title: "Observable's examples" } },
+        { path: '', redirectTo: 'dashboard', pathMatch: 'full' , data: { title: "Dashboard" } },
       ]
   }
 ]

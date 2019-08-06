@@ -19,6 +19,7 @@ import { CHILD_ROUTES } from './pages.routes';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromisesComponent } from './promises/promises.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ObservableExampleComponent } from './observable-example/observable-example.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { RxjsComponent } from './rxjs/rxjs.component';
     AccountSettingsComponent,
     PromisesComponent,
     RxjsComponent,
+    ObservableExampleComponent,
     ],
   exports: [
     DashboardComponent,
