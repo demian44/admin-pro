@@ -19,6 +19,21 @@ export class BreadcrumsComponent implements OnInit {
     private meta: Meta
   ) {
 
+    // try {
+    alert("Hola");
+    console.log("Muestro events:");
+    console.log(this.router);
+    if (this.router != undefined) {
+      console.log(this.router.events);
+    }
+    else{
+      console.log("No hay events....");
+    }
+    // }
+    // catch{
+
+    // }
+
     this.getDataRoute().subscribe(data => {
       this.title2.setTitle(data);
       this.title = data;
